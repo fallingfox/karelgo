@@ -4,6 +4,12 @@ import "strings"
 import "math/rand"
 import "errors"
 
+/**
+	Metoda vymění náhodný znak v řetězci za token
+	@param word řetězec, který bude modifikován
+	@param token token, kterým bude nahrazen náhodný znak v řetězci (maximální velikost: 1 znak)
+	@return string modifikovaný řetězec
+*/
 func MissingChar(word string, token string) (string, error) {
 	// kontrola délky vstupního slova
 	if ok, err := checkWord(word); !ok {
