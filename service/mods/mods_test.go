@@ -94,3 +94,20 @@ func TestReverseEmptyWord(t *testing.T) {
 	}
 	t.Log(err)
 }
+
+func TestRandom(t *testing.T) {
+	str, err := Random("HeLlo")
+	if err != nil {
+		t.Log(err)
+		t.Fail()
+	}
+	t.Log(str)
+}
+
+func TestRandomEmptyWord(t *testing.T) {
+	_, err := Random("")
+	if err == nil {
+		t.Fail()
+	}
+	t.Log(err)
+}
